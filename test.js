@@ -43,11 +43,11 @@ app.get('/signup', function(req, res) {
 app.post('/signup',function(req,res){
     const{email,password} = req.body;
     console.log(email,password);
-    db.query('INSERT into  user SET ?', {email:email, password:password}, (error,results)=>{
+    db.query('INSERT into user SET ?', {email:email, password:password}, (error,results)=>{
       if(error){
           console.log(error);
       } else {
-          
+          res.render('signup');
       }});
 })
 
