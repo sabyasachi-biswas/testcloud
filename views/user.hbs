@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        form{
+            width: 50%;
+            margin: auto;
+            
+        }
+        input{
+            margin: 20px;
+            height: 50px;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<html>
+    <body>
+        <form>
+            <label for="fname">User</label><br><br>
+            
+            {{#each rows}}
+            <h4>Hi, {{this.email}}</h4>
+            {{/each}}
+
+            <br>
+            
+        </form>
+        <a href="/login">Login</a>
+    </body>
+</html>
